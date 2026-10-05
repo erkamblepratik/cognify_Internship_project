@@ -169,9 +169,11 @@ body {
 
 /* ---------- Header ---------- */
 .main-header {
-    text-align: center;
-    padding-bottom: 1.5rem;
-    border-bottom: 3px solid #eef2f6;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0;
     margin-bottom: 2rem;
 }
 
@@ -179,9 +181,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.8rem;
+    flex: 0 0 auto;
+    margin-bottom: 0;
 }
 
 .site-logo {
@@ -191,9 +192,9 @@ body {
 
 .site-logo img {
     display: block;
-    width: min(380px, 70vw);
+    width: min(240px, 25vw);
     height: auto;
-    max-height: 110px;
+    max-height: 72px;
     object-fit: contain;
 }
 
@@ -219,16 +220,15 @@ body {
 
 .header-navigation {
     display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    width: fit-content;
+    gap: 0.35rem;
+    flex-wrap: nowrap;
+    width: auto;
     max-width: 100%;
-    background: #f8fafc;
-    padding: 0.8rem 1.5rem;
-    border-radius: 60px;
-    border: 1px solid #e9edf2;
+    background: transparent;
+    padding: 0;
+    border: none;
     justify-content: center;
-    margin: 0 auto 1rem;
+    margin: 0;
 }
 
 .header-nav-link {
@@ -1210,8 +1210,18 @@ body {
         padding: 1rem;
     }
 
+    .main-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .site-logo img {
+        width: min(240px, 70vw);
+    }
+
     .header-navigation {
         width: 100%;
+        flex-wrap: wrap;
         gap: 0.5rem;
         padding: 0.6rem 0.8rem;
     }
